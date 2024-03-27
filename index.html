@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Website Using HTML and CSS</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
     <section class="header">
         <nav>
             <img class="logo-image" src="image/logo.png" alt="">
-            <div class="nav-bar">
+            <div class="nav-bar" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -19,6 +21,7 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenue()"></i>
         </nav>
 
         <div class="text-box">
@@ -28,6 +31,41 @@
         </div>
 
     </section>
+
+
+    <!-- course section -->
+
+    <section class="courses">
+            <h1>Courses We Offer</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, doloribus.</p>
+            <div class="row">
+                <div class="courses-col">
+                    <h3>Intermadiet</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, animi nihil hic ea, laboriosam, autem adipisci repudiandae nemo voluptate facere laborum esse facilis quas accusamus temporibus distinctio minus quibusdam dicta.</p>
+                </div>
+                <div class="courses-col">
+                    <h3>Degree</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, animi nihil hic ea, laboriosam, autem adipisci repudiandae nemo voluptate facere laborum esse facilis quas accusamus temporibus distinctio minus quibusdam dicta.</p>
+                </div>
+                <div class="courses-col">
+                    <h3>Post Graduated</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, animi nihil hic ea, laboriosam, autem adipisci repudiandae nemo voluptate facere laborum esse facilis quas accusamus temporibus distinctio minus quibusdam dicta.</p>
+                </div>
+
+            </div>
+        
+    </section>
+
+<!-- Javascript for toggle menue -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenue(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
     
 </body>
 </html>
